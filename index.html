@@ -11,11 +11,8 @@
         console.log(document.location.pathname)
         console.log(document.location.pathname.replace(/^.*=/,""))
         console.log(decodeURIComponent(document.location.pathname.replace(/^.*redirectUrl=/,"")))
-        if (url) {
-              window.location = url
-        } else {
-              window.location = decodeURIComponent(document.location.pathname.replace(/^.*redirectUrl=/,""))
-        }
+
+        window.location = decodeURIComponent(document.location.pathname.replace(/^.*=/,""))
     </script>
 </body>
 </html>
