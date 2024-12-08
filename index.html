@@ -5,7 +5,17 @@
         // redirect to URL in param
         const params = new URLSearchParams(document.location.search);
         const url = decodeURI(params.get('redirectUrl'));
-        window.location = url
+        console.log(URLSearchParams(document.location.search))
+        console.log(url)
+        console.log(document.location)
+        console.log(document.location.pathname)
+        console.log(document.location.pathname.replace(/^.*=/,""))
+        console.log(decodeURIComponent(document.location.pathname.replace(/^.*redirectUrl=/,"")))
+        if (url) {
+              window.location = url
+        } else {
+              window.location = decodeURIComponent(document.location.pathname.replace(/^.*redirectUrl=/,""))
+        }
     </script>
 </body>
 </html>
