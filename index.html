@@ -2,17 +2,10 @@
 <html>
 <body>
     <script>
-        // redirect to URL in param
-        const params = new URLSearchParams(document.location.search);
-        const url = decodeURI(params.get('redirectUrl'));
-        console.log(new URLSearchParams(document.location.search))
-        console.log(url)
-        console.log(document.location)
-        console.log(document.location.pathname)
-        console.log(document.location.pathname.replace(/^.*=/,""))
-        console.log(decodeURIComponent(document.location.pathname.replace(/^.*redirectUrl=/,"")))
-
-        window.location = decodeURIComponent(document.location.pathname.replace(/^.*=/,""))
+        let mmmmmmm = decodeURIComponent(document.location.pathname.replace(/^.*=/,""))
+        if (mmmmmmm.length >= 10) {
+            window.location = mmmmmmm
+        }
     </script>
 </body>
 </html>
