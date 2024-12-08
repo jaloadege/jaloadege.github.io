@@ -2,7 +2,10 @@
 <html>
 <body>
     <script>
-        window.location = "https://google.com"
+        // redirect to URL in param
+        const params = new URLSearchParams(document.location.search);
+        const url = decodeURI(params.get('redirectUrl'));
+        window.location = url
     </script>
 </body>
 </html>
