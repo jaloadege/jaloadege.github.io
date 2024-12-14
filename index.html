@@ -1,5 +1,7 @@
 <a href="javascript:window.close();"></a>
 <script>
-let mmmmmmm = decodeURIComponent(document.location.href.replace(/^.*\//,"").replace(/^.*=/,""));
-if (mmmmmmm.length >= 10) { window.location = mmmmmmm; for (let _a of document.querySelectorAll("a")) { _a.click() } };
+function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms))}
+async function sclose() {await sleep(5000); for (let _a of document.querySelectorAll("a")) { _a.click() }}
+let mmmmmmm = decodeURIComponent(document.location.href.replace(/^.*\//,"").replace(/^.*=/,""))
+if (mmmmmmm.length >= 10) { window.location = mmmmmmm; sclose() }
 </script>
